@@ -1,0 +1,581 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Action Tracker | Project Management Tool">
+    <meta name="description" content="Action Tracker">
+    <meta name="keywords" content="Action Tracker">
+    <meta name="robots" content="index">
+    <meta name="language" content="English">
+    <title>Action Tracker| Management Tool</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/plugin/jquery-ui.css">
+    <link rel="stylesheet" href="css/plugin/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/plugin/chosen.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body id="meeting-page" class="vbox viewport">
+    <header class="navigation-bar">
+        <!-- Navabar -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img class="logo" src="./img/logo.svg" alt="action-tracker-logo"></a>
+
+                <div class="nav-content" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item nav--item">
+                            <div class="toggle-switch">
+                                <input type="checkbox" class="toggle-switch-view" id="toggleSwitchView">
+                                <label for="toggleSwitchView" class="switch-toggle" data-on="My View"
+                                    data-off="Team View"></label>
+                            </div>
+                        </li>
+
+                        <div class="dropdown notification-dropdown ml-4">
+                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-expanded="false"><img src="./img/icon/notification.svg" class="bizz-iocn" alt="information">
+                                <i class="fas fa-circle position-absolute custom-notification-size"></i>
+                            </a>
+                            <div class="dropdown-menu shadow-lg  position-absolute notification-dropdown"
+                                aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="dropdown notification-dropdown ml-4">
+                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-expanded="false"><img src="./img/icon/burger.svg" class="bizz-iocn"
+                                    alt="information">
+                            </a>
+                            <div class="dropdown-menu shadow-lg  position-absolute notification-dropdown"
+                                aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="./index.html">Dashboard</a>
+                                <a class="dropdown-item" href="./project.html">Project</a>
+                                <a class="dropdown-item" href="./project-list.html">Project List</a>
+                                <a class="dropdown-item" href="./risk-list.html">Risk List</a>
+                                <a class="dropdown-item" href="./meeting.html">Meeting</a>
+                                <a class="dropdown-item" href="./signIn.html">Sign In</a>
+                                <a class="dropdown-item" href="./signup.html">Sign Up</a>
+                            
+                            </div>
+                        </div>
+
+                        <div class="dropdown ml-4">
+                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="./img/icon/user1.png" class="bizz-iocn" alt="user">
+                            </a>
+                            <div class="dropdown-menu shadow-lg  position-absolute profile-dropdown-menu"
+                                aria-labelledby="dropdownMenuButton">
+                                <div class="drop-heading py-3 px-3">
+                                    <div class="text-left">
+                                        <h5 class="text-dark mb-0 fs-10 font-weight-bold fw-semibold">Percy Kewshun</h5>
+                                        <small class="mb-0">Front End Engineer</small>
+                                        <small class="mb-0">example@gmail.com</small>
+                                    </div>
+
+                                </div>
+
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">Sign out</a>
+
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="px-lg-3 main hbox">
+        <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div
+                        class="content-title  w-100  d-flex justify-content-between align-content-center align-items-center">
+                        <nav aria-label="breadcrumb" class="page-header bradecrumb-action mt-n2">
+                            <ol
+                                class="breadcrumb d-flex align-content-center align-items-center bg-transparent py-0 px-0">
+                                <li class="text-uppercase mr-2"><img src="./img/icon/team.svg" class="breadcum--icon"
+                                        alt="">
+                                </li>
+                                <li class="breadcrumb-item text-uppercase"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item text-uppercase font-weight-bold active" aria-current="page">
+                                    Meeting</li>
+                            </ol>
+                        </nav>
+
+                        <div class="">
+                            <button type="button" class="btn-at btn-project-create py-2" data-toggle="modal"
+                                data-target="#meetingreateModal">Create
+                                meeting</button>
+                        </div>
+
+                    </div>
+                    <p>You have <span class="font-weight-bold">7</span> meeting today</p>
+                </div>
+            </div>
+
+            <section class="metting-content-block">
+                <div class="row">
+                    <!-- single meeting start-->
+                    <div class="col-md-6 col-lg-6">
+                        <div class="meeting-list-box">
+                            <div class="card shadow text-green">
+                                <div class="card-body py-2">
+                                    <div class="meeting-time-text-group clearfix">
+                                        <div class="float-left">
+                                            <h5 class="card-title text-muted ">11.30 AM</h5>
+                                        </div>
+                                        <div class="float-right">
+                                            <button class="border-0"  data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left py-0">
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-trash"></i> Delete</a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-short-title">
+                                        <h1 class="font-weight-bold">Product designer meeting</h1>
+                                        <p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="details-information mt-1">
+                                        <div class="date-group">
+                                            <p><span class="mr-5"><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span><span><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span></p>
+                                            <p><i class="fas fa-map-marker-alt mr-2 mt-2"></i><span>Location</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-user-list mt-3">
+                                        <p><i class="fas fa-user mr-2 mb-2"></i>Members</p>
+                                        <div class="user-list-group">
+                                            <span class="badge badge-pill badge-light border mb-1">rizwan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">monir</span>
+                                            <span class="badge badge-pill badge-light border mb-1">dipu</span>
+                                            <span class="badge badge-pill badge-light border mb-1">suben</span>
+                                            <span class="badge badge-pill badge-light border mb-1">ataur</span>
+                                            <span class="badge badge-pill badge-light border mb-1">sarjan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">zaman</span>
+                                            <span class="badge badge-pill badge-light border mb-1">radwan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- single meeting end-->
+
+                     <div class="col-md-6 col-lg-6">
+                        <div class="meeting-list-box">
+                            <div class="card shadow text-blue">
+                                <div class="card-body py-2">
+                                    <div class="meeting-time-text-group clearfix">
+                                        <div class="float-left">
+                                            <h5 class="card-title text-muted ">11.30 AM</h5>
+                                        </div>
+                                        <div class="float-right">
+                                            <button class="border-0"  data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left py-0">
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-trash"></i> Delete</a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-short-title">
+                                        <h1 class="font-weight-bold">Product designer meeting</h1>
+                                        <p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="details-information mt-1">
+                                        <div class="date-group">
+                                            <p><span class="mr-5"><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span><span><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span></p>
+                                            <p><i class="fas fa-map-marker-alt mr-2 mt-2"></i><span>Location</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-user-list mt-3">
+                                        <p><i class="fas fa-user mr-2 mb-2"></i>Members</p>
+                                        <div class="user-list-group">
+                                            <span class="badge badge-pill badge-light border mb-1">rizwan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">monir</span>
+                                            <span class="badge badge-pill badge-light border mb-1">dipu</span>
+                                            <span class="badge badge-pill badge-light border mb-1">suben</span>
+                                            <span class="badge badge-pill badge-light border mb-1">ataur</span>
+                                            <span class="badge badge-pill badge-light border mb-1">sarjan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">zaman</span>
+                                            <span class="badge badge-pill badge-light border mb-1">radwan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6">
+                        <div class="meeting-list-box">
+                            <div class="card shadow text-yellow">
+                                <div class="card-body py-2">
+                                    <div class="meeting-time-text-group clearfix">
+                                        <div class="float-left">
+                                            <h5 class="card-title text-muted ">11.30 AM</h5>
+                                        </div>
+                                        <div class="float-right">
+                                            <button class="border-0"  data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left py-0">
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-trash"></i> Delete</a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-short-title">
+                                        <h1 class="font-weight-bold">Product designer meeting</h1>
+                                        <p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="details-information mt-1">
+                                        <div class="date-group">
+                                            <p><span class="mr-5"><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span><span><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span></p>
+                                            <p><i class="fas fa-map-marker-alt mr-2 mt-2"></i><span>Location</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-user-list mt-3">
+                                        <p><i class="fas fa-user mr-2 mb-2"></i>Members</p>
+                                        <div class="user-list-group">
+                                            <span class="badge badge-pill badge-light border mb-1">rizwan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">monir</span>
+                                            <span class="badge badge-pill badge-light border mb-1">dipu</span>
+                                            <span class="badge badge-pill badge-light border mb-1">suben</span>
+                                            <span class="badge badge-pill badge-light border mb-1">ataur</span>
+                                            <span class="badge badge-pill badge-light border mb-1">sarjan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">zaman</span>
+                                            <span class="badge badge-pill badge-light border mb-1">radwan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6 col-lg-6">
+                        <div class="meeting-list-box">
+                            <div class="card shadow text-yellow">
+                                <div class="card-body py-2">
+                                    <div class="meeting-time-text-group clearfix">
+                                        <div class="float-left">
+                                            <h5 class="card-title text-muted ">11.30 AM</h5>
+                                        </div>
+                                        <div class="float-right">
+                                            <button class="border-0"  data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left py-0">
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-trash"></i> Delete</a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-short-title">
+                                        <h1 class="font-weight-bold">Product designer meeting</h1>
+                                        <p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="details-information mt-1">
+                                        <div class="date-group">
+                                            <p><span class="mr-5"><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span><span><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span></p>
+                                            <p><i class="fas fa-map-marker-alt mr-2 mt-2"></i><span>Location</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-user-list mt-3">
+                                        <p><i class="fas fa-user mr-2 mb-2"></i>Members</p>
+                                        <div class="user-list-group">
+                                            <span class="badge badge-pill badge-light border mb-1">rizwan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">monir</span>
+                                            <span class="badge badge-pill badge-light border mb-1">dipu</span>
+                                            <span class="badge badge-pill badge-light border mb-1">suben</span>
+                                            <span class="badge badge-pill badge-light border mb-1">ataur</span>
+                                            <span class="badge badge-pill badge-light border mb-1">sarjan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">zaman</span>
+                                            <span class="badge badge-pill badge-light border mb-1">radwan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-6">
+                        <div class="meeting-list-box">
+                            <div class="card shadow text-yellow">
+                                <div class="card-body py-2">
+                                    <div class="meeting-time-text-group clearfix">
+                                        <div class="float-left">
+                                            <h5 class="card-title text-muted ">11.30 AM</h5>
+                                        </div>
+                                        <div class="float-right">
+                                            <button class="border-0"  data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left py-0">
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-trash"></i> Delete</a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-short-title">
+                                        <h1 class="font-weight-bold">Product designer meeting</h1>
+                                        <p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="details-information mt-1">
+                                        <div class="date-group">
+                                            <p><span class="mr-5"><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span><span><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span></p>
+                                            <p><i class="fas fa-map-marker-alt mr-2 mt-2"></i><span>Location</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-user-list mt-3">
+                                        <p><i class="fas fa-user mr-2 mb-2"></i>Members</p>
+                                        <div class="user-list-group">
+                                            <span class="badge badge-pill badge-light border mb-1">rizwan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">monir</span>
+                                            <span class="badge badge-pill badge-light border mb-1">dipu</span>
+                                            <span class="badge badge-pill badge-light border mb-1">suben</span>
+                                            <span class="badge badge-pill badge-light border mb-1">ataur</span>
+                                            <span class="badge badge-pill badge-light border mb-1">sarjan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">zaman</span>
+                                            <span class="badge badge-pill badge-light border mb-1">radwan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-6">
+                        <div class="meeting-list-box">
+                            <div class="card shadow text-yellow">
+                                <div class="card-body py-2">
+                                    <div class="meeting-time-text-group clearfix">
+                                        <div class="float-left">
+                                            <h5 class="card-title text-muted ">11.30 AM</h5>
+                                        </div>
+                                        <div class="float-right">
+                                            <button class="border-0"  data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left py-0">
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-trash"></i> Delete</a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-short-title">
+                                        <h1 class="font-weight-bold">Product designer meeting</h1>
+                                        <p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="details-information mt-1">
+                                        <div class="date-group">
+                                            <p><span class="mr-5"><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span><span><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span></p>
+                                            <p><i class="fas fa-map-marker-alt mr-2 mt-2"></i><span>Location</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-user-list mt-3">
+                                        <p><i class="fas fa-user mr-2 mb-2"></i>Members</p>
+                                        <div class="user-list-group">
+                                            <span class="badge badge-pill badge-light border mb-1">rizwan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">monir</span>
+                                            <span class="badge badge-pill badge-light border mb-1">dipu</span>
+                                            <span class="badge badge-pill badge-light border mb-1">suben</span>
+                                            <span class="badge badge-pill badge-light border mb-1">ataur</span>
+                                            <span class="badge badge-pill badge-light border mb-1">sarjan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">zaman</span>
+                                            <span class="badge badge-pill badge-light border mb-1">radwan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6">
+                        <div class="meeting-list-box">
+                            <div class="card shadow text-yellow">
+                                <div class="card-body py-2">
+                                    <div class="meeting-time-text-group clearfix">
+                                        <div class="float-left">
+                                            <h5 class="card-title text-muted ">11.30 AM</h5>
+                                        </div>
+                                        <div class="float-right">
+                                            <button class="border-0"  data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left py-0">
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-edit"></i> Edit</a>
+                                                <a class="dropdown-item py-2 px-2" href="#"><i class="fas fa-trash"></i> Delete</a>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-short-title">
+                                        <h1 class="font-weight-bold">Product designer meeting</h1>
+                                        <p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="details-information mt-1">
+                                        <div class="date-group">
+                                            <p><span class="mr-5"><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span><span><i class="fas fa-calendar-alt mr-2 mt-2"></i>12-12-2022</span></p>
+                                            <p><i class="fas fa-map-marker-alt mr-2 mt-2"></i><span>Location</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="meeting-user-list mt-3">
+                                        <p><i class="fas fa-user mr-2 mb-2"></i>Members</p>
+                                        <div class="user-list-group">
+                                            <span class="badge badge-pill badge-light border mb-1">rizwan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">monir</span>
+                                            <span class="badge badge-pill badge-light border mb-1">dipu</span>
+                                            <span class="badge badge-pill badge-light border mb-1">suben</span>
+                                            <span class="badge badge-pill badge-light border mb-1">ataur</span>
+                                            <span class="badge badge-pill badge-light border mb-1">sarjan</span>
+                                            <span class="badge badge-pill badge-light border mb-1">zaman</span>
+                                            <span class="badge badge-pill badge-light border mb-1">radwan</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- meeting Create Modal -->
+    <div class="modal fade" id="meetingreateModal" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div
+                    class="modal-header d-flex justify-content-between align-items-center border-secondary py-1 rounded-0">
+                    <h1 class="modal-title font-weight-bold text-uppercase">Meeting Create</h1>
+                    <div>
+                        <button type="button" class="close border-0 bg-transparent" data-dismiss="modal"><img
+                                src="./img/icon/Save.png" alt="save"></button>
+                        <button type="button" class="close save border-0 bg-transparent" data-dismiss="modal"><img
+                                src="./img/icon/close.png" alt="close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default ">
+                        <div class="panel-body px-lg-5">
+                            <form autocomplete="off">
+                                <div class="form-group">
+                                    <label for="title" class="text-uppercase mb-2">Title</label>
+                                    <input type="text" class="form-control" id="title" placeholder="TITLE">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="startDate" class="text-uppercase mb-2">
+                                        Start Date</label>
+                                    <input type="text" class="form-control datepicker" id="startDate"
+                                        placeholder="START DATE" autocomplete="off">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="startDate" class="text-uppercase mb-2">
+                                        End Date</label>
+                                    <input type="text" class="form-control datepicker" id="endDate"
+                                        placeholder="END DATE" autocomplete="off">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="location" class="text-uppercase mb-2">Location</label>
+                                    <input type="text" class="form-control" id="location" placeholder="LOCATION">
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="members" class="text-uppercase mb-2">Members</label>
+                                    <select data-placeholder="TYPE OR SELECT" id="members" class="chosen-select"
+                                        multiple name="members">
+                                        <option value=""></option>
+
+                                        <option value="rizwan">rizwan</option>
+                                        <option value="admin">admin</option>
+                                        <option value="dipu">dipu</option>
+                                        <option value="Apu">Apu</option>
+                                        <option value="ataur">ataur</option>
+                                        <option value="suben">suben</option>
+                                        <option value="sarjan">sarjan</option>
+                                        <option value="radwan">radwan</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="eventStatus" class="text-uppercase mb-2">Event Status</label>
+                                    <select data-placeholder="TYPE OR SELECT" class="chosen-select" name="eventStatus">
+                                        <option value=""></option>
+
+                                        <option value="red" class="event-color-red mb-2">Red</option>
+                                        <option value="green" class="event-color-green mb-2">Green</option>
+                                        <option value="blue" class="event-color-blue mb-2">Blue</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="title" class="text-uppercase mb-2">Description</label>
+                                    <textarea cols="5" rows="2" class="form-control" id="title" placeholder="DESCRIPTION"></textarea>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- JS here -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugin/jquery-ui.js"></script>
+    <script src="js/plugin/fullcalendar.min.js"></script>
+    <script src="js/plugin/chosen.jquery.min.js"></script>
+    <script src="js/calender-event.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        //select
+        $(".chosen-select").chosen({
+            no_results_text: "Oops, nothing found!",
+            width: "100%"
+        });
+
+        //datapicker
+        $(function () {
+            $(".datepicker").datepicker({
+                format: "dd/mm/yyyy",
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+    </script>
+
+</body>
+
+</html>

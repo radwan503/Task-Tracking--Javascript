@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Action Tracker | Project Management Tool">
+    <meta name="description" content="Action Tracker">
+    <meta name="keywords" content="Action Tracker">
+    <meta name="robots" content="index">
+    <meta name="language" content="English">
+    <title>Action Tracker| Management Tool</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/plugin/jquery-ui.css">
+    <link rel="stylesheet" href="css/plugin/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/plugin/chosen.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body id="profile-page">
+    <form id="profileId" class="form-signin" autocomplete="off">
+        <div class="sign-container">
+            <div class="picture-container mb-3">
+                <div class="picture-group">
+                    <img src="./img/dummyprofile.png"
+                        class="picture-src" id="userProfilePreview" title="">
+                    <input type="file" id="upload-input" class="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="username">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="email">
+            </div>
+            <button class="btn btn-lg btn-block text-uppercase" type="button">Update</button>
+
+        </div>
+    </form>
+
+    <!-- JS here -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugin/jquery-ui.js"></script>
+    <script src="js/plugin/fullcalendar.min.js"></script>
+    <script src="js/plugin/chosen.jquery.min.js"></script>
+    <script src="js/calender-event.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Prepare the preview for profile picture
+            $("#upload-input").change(function () {
+                readURL(this);
+            });
+        });
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#userProfilePreview').attr('src', e.target.result).fadeIn('slow');
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+
+</html>

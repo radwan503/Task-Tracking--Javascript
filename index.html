@@ -1,0 +1,1377 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Action Tracker | Project Management Tool">
+    <meta name="description" content="Action Tracker">
+    <meta name="keywords" content="Action Tracker">
+    <meta name="robots" content="index">
+    <meta name="language" content="English">
+    <title>Action Tracker| Management Tool</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/plugin/jquery-ui.css">
+    <link rel="stylesheet" href="css/plugin/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/plugin/chosen.css">
+    <link rel="stylesheet" href="css/plugin/jquery.steps.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body id="dashboard-page" class="vbox viewport">
+    <header class="navigation-bar">
+        <!-- Navabar -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logo" src="./img/logo.svg" alt="action-tracker-logo"></a>
+
+                <div class="nav-content" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item nav--item">
+                            <div class="toggle-switch">
+                                <input type="checkbox" class="toggle-switch-view" id="toggleSwitchView">
+                                <label for="toggleSwitchView" class="switch-toggle" data-on="My View"
+                                    data-off="Team View"></label>
+                            </div>
+                        </li>
+
+                        <!-- <li class="nav-item nav--item ml-4 mt-lg-1">
+                            <a href="#"><img src="./img/icon/notification.svg" class="bizz-iocn" alt="information">
+                                <div class="spinner-grow text-danger notification-alert" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </a>
+                            
+                        </li> -->
+
+                        <div class="dropdown notification-dropdown ml-4">
+                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-expanded="false"><img src="./img/icon/notification.svg" class="bizz-iocn"
+                                    alt="information">
+                                    <i class="fas fa-circle position-absolute custom-notification-size"></i>
+                            </a>
+                            <div class="dropdown-menu  shadow-lg  position-absolute notification-dropdown"
+                                aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#" title="Neil Coomber created a project Smokey Bear">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+
+                            </div>
+                        </div>
+                        
+
+                        
+                        <div class="dropdown notification-dropdown ml-4">
+                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-expanded="false"><img src="./img/icon/burger.svg" class="bizz-iocn"
+                                    alt="information">
+                            </a>
+                            <div class="dropdown-menu shadow-lg  position-absolute notification-dropdown"
+                                aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="./index.html">Dashboard</a>
+                                <a class="dropdown-item" href="./project.html">Project</a>
+                                <a class="dropdown-item" href="./project-list.html">Project List</a>
+                                <a class="dropdown-item" href="./risk-list.html">Risk List</a>
+                                <a class="dropdown-item" href="./meeting.html">Meeting</a>
+                                <a class="dropdown-item" href="./signIn.html">Sign In</a>
+                                <a class="dropdown-item" href="./signup.html">Sign Up</a>
+                            
+                            </div>
+                        </div>
+
+                        <div class="dropdown profile-dropdown ml-4">
+                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="./img/icon/user1.png" class="bizz-iocn" alt="user">
+                            </a>
+                            <div class="dropdown-menu shadow-lg  position-absolute profile-dropdown-menu"
+                                aria-labelledby="dropdownMenuButton">
+                                <div class="drop-heading py-3 px-3">
+                                    <div class="text-left">
+                                        <h5 class="text-dark mb-0 fs-10 font-weight-bold fw-semibold">Percy Kewshun</h5>
+                                        <small class="mb-0">Front End Engineer</small>
+                                        <small class="mb-0">example@gmail.com</small>
+                                    </div>
+
+                                </div>
+
+                                <a class="dropdown-item" href="./profile.html">Profile</a>
+                                <a class="dropdown-item" href="signIn.html">Sign out</a>
+
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="px-lg-3 main hbox">
+        <div class="container-fluid container--custom">
+            <div class="row">
+                <aside class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <!-- Calendar block -->
+                    <div class="action_tracker-calendar-block">
+                        <div class="card calendar-card">
+                            <div class="card-header action_tracker__block-header">
+                                <div class="action-tracker-header__title">
+                                    <span><img class="calendar-icon" src="./img/icon/calendar.svg" alt="calendar-icon">
+                                    </span>
+                                    <h5 id="actionTrackerCurrrentDate"></h5>
+                                </div>
+                            </div>
+
+                            <div class="card-body py-0 px-0">
+                                <div id="calendar" class="action_tracker__event-calender"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project block -->
+                    <div class="action_tracker-project-block">
+                        <div class="card action_tracker--project-card">
+                            <div class="card-header action_tracker__block-header">
+                                <div class="action-tracker-header__title">
+                                    <span><img class="calendar-icon" src="./img/icon/project.svg" alt="calendar-icon">
+                                    </span>
+                                    <h5>Projects</h5>
+                                </div>
+                            </div>
+                            <div class="tracker-project-modal-body card-body px-0">
+                                <button type="button" class="btn-at btn-project-create mb-3 py-2 ml-3"
+                                    data-toggle="modal" data-target="#projectCreateModal">New
+                                    Project</button>
+                                <div class="action_tracker__list-group">
+                                    <div class="outer-list-group">
+                                        <div class="action_tracker__list-item ml-3">
+                                            <h1 class="mb-1">Northernlight <span class="click-icon-show"><i
+                                                        class="fas fa-caret-right"></i></span></h1>
+                                            <h2 class="mb-2 text-truncate">Outsourcing project for AkzoNobel</h2>
+                                            <div class="action_tracker__project-status-group">
+                                                <div class="action_tracker--progress-group">
+                                                    <p>complete</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar bg-green" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>open</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar bg-blue" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>At risk</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-yellow" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>Delayed</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-orange" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>Cancel</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-deep-red" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="action_tracker__list-item ml-3">
+                                            <h1 class="mb-1">Northernlight <span class="click-icon-show"><i
+                                                        class="fas fa-caret-right"></i></span></h1>
+                                            <h2 class="mb-2 text-truncate">Outsourcing project for AkzoNobel</h2>
+                                            <div class="action_tracker__project-status-group">
+                                                <div class="action_tracker--progress-group">
+                                                    <p>complete</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar bg-green" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>open</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar bg-blue" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>At risk</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-yellow" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>Delayed</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-orange" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>Cancel</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-deep-red" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="action_tracker__list-item ml-3">
+                                            <h1 class="mb-1">Northernlight <span class="click-icon-show"><i
+                                                        class="fas fa-caret-right"></i></span></h1>
+                                            <h2 class="mb-2 text-truncate">Outsourcing project for AkzoNobel</h2>
+                                            <div class="action_tracker__project-status-group">
+                                                <div class="action_tracker--progress-group">
+                                                    <p>complete</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar bg-green" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>open</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar bg-blue" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>At risk</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-yellow" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>Delayed</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-orange" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>Cancel</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-deep-red" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="action_tracker__list-item ml-3">
+                                            <h1 class="mb-1">Northernlight <span class="click-icon-show"><i
+                                                        class="fas fa-caret-right"></i></span></h1>
+                                            <h2 class="mb-2 text-truncate">Outsourcing project for AkzoNobel</h2>
+                                            <div class="action_tracker__project-status-group">
+                                                <div class="action_tracker--progress-group">
+                                                    <p>complete</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar bg-green" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>open</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar bg-blue" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>At risk</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-yellow" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>Delayed</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-orange" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="action_tracker--progress-group">
+                                                    <p>Cancel</p>
+                                                    <p>5</p>
+                                                    <div class="progress rounded-0 h-25">
+                                                        <div class="progress-bar  bg-deep-red" role="progressbar"
+                                                            style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
+                    <!-- action block -->
+                    <div class="action_tracker-action-block">
+                        <div class="card action-tracker--action-card">
+                            <div class="card-header action_tracker__block-header">
+                                <div class="action-tracker-header__title">
+                                    <span><img class="calendar-icon action-icon" src="./img/icon/action.svg"
+                                            alt="calendar-icon">
+                                    </span>
+                                    <h5>Actions</h5>
+                                </div>
+                                <div class="action-tracker__filter">
+                                    <button type="button" class="filter--btn"><img src="./img/icon/filter.svg"
+                                            alt=""></button>
+                                </div>
+                            </div>
+                            <div class="card-body action-tracker-actions">
+                                <button type="button" class="btn-at btn-project-create mb-3 py-2" data-toggle="modal"
+                                    data-target="#actionCreate">New Action</button>
+                                <div class="action-tracker-action-list">
+                                    <div class="action-list__group">
+                                        <div class="list-group__header py-2 px-2">
+                                            <h1 class="header--day-title">Yesterday</h1>
+                                            <h1 class="header--date-title">20/12/2022</h1>
+                                        </div>
+
+                                        <div class="list-group__items">
+                                            <a class="action-single-item" href="./project.html">
+                                                <div class="media  px-3 py-2 mt-2 border rounded shadow-sm list--item">
+                                                    <!-- single item -->
+
+                                                    <picture>
+                                                        <img class="mr-3 item-user--profile rounded-circle img-responsive"
+                                                            src="./img/user1.png" alt="Generic placeholder image">
+                                                    </picture>
+                                                    <div class="media-body item--content text-truncate">
+                                                        <h5 class="mb-1 d-flex action-titleTest">Media heading<span
+                                                                class="click-icon-show ml-1"><i
+                                                                    class="fas fa-caret-right"></i></span></h5>
+                                                        <p class="mb-1">Analysis, generate requirements and construct
+                                                            the network as needed. </p>
+                                                        <p>Rob William</p>
+
+                                                    </div>
+                                                    <div
+                                                        class="item--status d-flex justify-content-center align-items-center">
+                                                        <span>
+                                                            <img class="status--icon" src="./img/status/open.svg"
+                                                                alt="">
+                                                        </span>
+                                                        <span>open</span>
+                                                    </div>
+
+                                                </div>
+                                            </a>
+
+                                            <a class="action-single-item" href="./project.html">
+                                                <div class="media  px-3 py-2 mt-2 border rounded shadow-sm list--item">
+                                                    <!-- single item -->
+
+                                                    <picture>
+                                                        <img class="mr-3 item-user--profile rounded-circle img-responsive"
+                                                            src="./img/user1.png" alt="Generic placeholder image">
+                                                    </picture>
+                                                    <div class="media-body item--content text-truncate">
+                                                        <h5 class="mb-1 d-flex action-titleTest">Media heading<span
+                                                                class="click-icon-show ml-1"><i
+                                                                    class="fas fa-caret-right"></i></span></h5>
+                                                        <p class="mb-1">Analysis, generate requirements and construct
+                                                            the network as needed. </p>
+                                                        <p>Rob William</p>
+
+                                                    </div>
+                                                    <div
+                                                        class="item--status d-flex justify-content-center align-items-center">
+                                                        <span>
+                                                            <img class="status--icon" src="./img/status/open.svg"
+                                                                alt="">
+                                                        </span>
+                                                        <span>open</span>
+                                                    </div>
+
+                                                </div>
+                                            </a>
+
+                                            <a href="./project.html">
+                                                <div class="media  px-3 py-2 mt-2 border rounded shadow-sm list--item">
+                                                    <!-- single item -->
+
+                                                    <picture>
+                                                        <img class="mr-3 item-user--profile rounded-circle img-responsive"
+                                                            src="./img/user1.png" alt="Generic placeholder image">
+                                                    </picture>
+                                                    <div class="media-body item--content text-truncate">
+                                                        <h5 class="mb-1 d-flex action-titleTest">Media heading<span
+                                                                class="click-icon-show ml-1"><i
+                                                                    class="fas fa-caret-right"></i></span></h5>
+                                                        <p class="mb-1">Analysis, generate requirements and construct
+                                                            the network as needed. </p>
+                                                        <p>Rob William</p>
+
+                                                    </div>
+                                                    <div
+                                                        class="item--status d-flex justify-content-center align-items-center">
+                                                        <span>
+                                                            <img class="status--icon" src="./img/status/open.svg"
+                                                                alt="">
+                                                        </span>
+                                                        <span>open</span>
+                                                    </div>
+
+                                                </div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
+                    <div class="action_tracker-activity-block">
+                        <div class="card action-tacker--activity-card">
+                            <div class="card-header action_tracker__block-header">
+                                <div class="action-tracker-header__title">
+                                    <span><img class="calendar-icon" src="./img/icon/activity.svg" alt="calendar-icon">
+                                    </span>
+                                    <h5>Activity</h5>
+                                </div>
+                            </div>
+
+                            <div class="card-body action-tracker-activity">
+                                <div class="action-tracker-activity-list">
+                                    <div class="activity-list__group">
+                                        <!-- group activity -->
+                                        <div class="list-group__header d-flex mb-3">
+                                            <h1 class="header--day-title mr-2">Yesterday</h1>
+                                            <h1 class="header--date-title">20/12/2022</h1>
+                                        </div>
+                                        <div class="list-group__items ">
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="activity-list__group">
+                                        <!-- group activity -->
+                                        <div class="list-group__header d-flex mb-3">
+                                            <h1 class="header--day-title mr-2">Yesterday</h1>
+                                            <h1 class="header--date-title">20/12/2022</h1>
+                                        </div>
+                                        <div class="list-group__items ">
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="list__item d-flex mb-4">
+                                                <!-- single activity item -->
+                                                <div class="list--icon mr-2">
+                                                    <i class="far fa-circle"></i>
+                                                </div>
+                                                <div class="list__details">
+                                                    <p class="list--title">8.50 AM</p>
+                                                    <p class="list--status"><span class="font-weight-semibold">Neil
+                                                            Coomber</span> created a project <span
+                                                            class="font-weight-semibold">Smokey Bear</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- project Create Modal -->
+    <div class="modal fade" id="projectCreateModal" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div
+                    class="modal-header d-flex justify-content-between align-items-center border-secondary py-1 rounded-0">
+                    <h1 class="modal-title font-weight-bold text-uppercase">New Project</h1>
+                    <div>
+                        <button type="button" class="close save border-0 bg-transparent" data-dismiss="modal"><img
+                                src="./img/icon/close.png" alt="close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default ">
+                        <div class="panel-body">
+                            <form id="projectCreate" action="#">
+                                <div>
+                                    <h3>Brief</h3>
+                                    <section class="brief-for-project">
+
+                                        <div class="form-group">
+                                            <label for="brief" class="text-uppercase mb-2">Brief</label>
+                                            <input type="text" class="form-control" id="brief" placeholder="BRIEF">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="owner" class="text-uppercase mb-2">Owner</label>
+                                            <select data-placeholder="TYPE OR SELECT" class="chosen-select"
+                                                name="owner">
+                                                <option value=""></option>
+
+                                                <option value="rizwan">rizwan</option>
+                                                <option value="admin">admin</option>
+                                                <option value="dipu">dipu</option>
+                                                <option value="Apu">Apu</option>
+                                                <option value="ataur">ataur</option>
+                                                <option value="suben">suben</option>
+                                                <option value="sarjan">sarjan</option>
+                                                <option value="radwan">radwan</option>
+
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="manager" class="text-uppercase mb-2">Manager</label>
+                                            <select data-placeholder="TYPE OR SELECT" class="chosen-select"
+                                                name="manager">
+                                                <option value=""></option>
+
+                                                <option value="rizwan">rizwan</option>
+                                                <option value="admin">admin</option>
+                                                <option value="dipu">dipu</option>
+                                                <option value="Apu">Apu</option>
+                                                <option value="ataur">ataur</option>
+                                                <option value="suben">suben</option>
+                                                <option value="sarjan">sarjan</option>
+                                                <option value="radwan">radwan</option>
+
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="description" class="text-uppercase mb-2">Description</label>
+                                            <textarea rows="2" cols="5" class="form-control" id="description"
+                                                placeholder="DESCRIPTION"></textarea>
+                                        </div>
+
+                                    </section>
+                                    <h3>Category</h3>
+                                    <section class="category-for-project">
+                                        <div class="select-category-list">
+                                            <h4>Selected category list</h4>
+                                        </div>
+                                        <hr>
+                                        <div class="category-list">
+                                            <div id="ck-button">
+                                                <label>
+                                                    <input type="checkbox" value="commercial"
+                                                        name="sport"><span>Commercial</span>
+                                                </label>
+                                            </div>
+
+                                            <div id="ck-button">
+                                                <label>
+                                                    <input type="checkbox" value="service mangement"
+                                                        name="sport"><span>Service Mangement</span>
+                                                </label>
+                                            </div>
+
+                                            <div id="ck-button">
+                                                <label>
+                                                    <input type="checkbox" value="sla" name="sport"><span>SLA</span>
+                                                </label>
+                                            </div>
+
+                                            <div id="ck-button">
+                                                <label>
+                                                    <input type="checkbox" value="product development"
+                                                        name="sport"><span>Product Development</span>
+                                                </label>
+                                            </div>
+
+                                            <div id="ck-button">
+                                                <label>
+                                                    <input type="checkbox" value="transition"
+                                                        name="sport"><span>Transition</span>
+                                                </label>
+                                            </div>
+
+                                            <div id="ck-button">
+                                                <label>
+                                                    <input type="checkbox" value="operation"
+                                                        name="sport"><span>Operation</span>
+                                                </label>
+                                            </div>
+
+                                            <div id="ck-button">
+                                                <label>
+                                                    <input type="checkbox" value="legal" name="sport"><span>Legal</span>
+                                                </label>
+                                            </div>
+
+                                            <div id="ck-button">
+                                                <label>
+                                                    <input type="checkbox" value="pricing"
+                                                        name="sport"><span>Pricing</span>
+                                                </label>
+                                            </div>
+
+                                            <div id="ck-button">
+                                                <label>
+                                                    <input type="checkbox" value="solution"
+                                                        name="sport"><span>Solution</span>
+                                                </label>
+                                            </div>
+
+                                            <div id="ck-button">
+                                                <label>
+                                                    <input type="checkbox" value="transformation"
+                                                        name="sport"><span>Transformation</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                    <h3>Action Option</h3>
+                                    <section class="action-option-for-project">
+                                        <div class="static-option">
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Open</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Closed</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Pending</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Hold</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Cancelled</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">In progress</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">At Risk </label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Delayed</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Critical
+                                                    Path</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Complete</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                        </div>
+                                        <hr>
+
+                                        <div class="user-define-option">
+                                            <header class="mb-3">
+                                                <h5>User Define Option</h5>
+                                                <p>Enable option define it</p>
+                                            </header>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    1</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    2</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    3</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    4</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    5</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    6</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <h3>Risk Option</h3>
+                                    <section class="risk-option-for-project">
+                                        <div class="static-option">
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Open</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Closed</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Pending</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Hold</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Cancelled</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">In progress</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">At Risk </label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Delayed</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Critical
+                                                    Path</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">Complete</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-on="" data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                        </div>
+                                        <hr>
+
+                                        <div class="user-define-option">
+                                            <header class="mb-3">
+                                                <h5>User Define Option</h5>
+                                                <p>Enable option define it</p>
+                                            </header>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    1</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    2</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    3</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    4</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    5</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                            <div
+                                                class="form-check d-flex justify-content-between align-items-center pl-0 mb-2">
+                                                <label for="stackedCheck1" class="form-check-label">User Define
+                                                    6</label>
+                                                <input id="stackedCheck1" class="form-check-input" type="checkbox"
+                                                    data-toggle="toggle" data-style="ios" checked>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    <h3>Team</h3>
+                                    <section>
+                                        <!-- <input id="acceptTerms" name="acceptTerms" type="checkbox" class="required">
+                                        <label for="acceptTerms">I agree with the Terms and Conditions.</label> -->
+
+                                        <div class="form-group">
+                                            <label for="email" class="text-uppercase mb-2">Email</label>
+                                            <select data-placeholder="TYPE OR SELECT" class="chosen-select"
+                                                name="email">
+                                                <option value=""></option>
+                                                <option value="rizwan">radwan@gmail.com</option>
+                                                <option value="admin">demo@gmail.com</option>
+                                                <option value="dipu">example@gmail.com</option>
+                                                <option value="Apu">test@gmail.com</option>
+                                                <option value="ataur">display@gmail.com</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="name" class="text-uppercase mb-2">Name</label>
+                                            <select data-placeholder="TYPE OR SELECT" class="chosen-select"
+                                                name="name">
+                                                <option value=""></option>
+                                                <option value="rizwan">radwan</option>
+                                                <option value="admin">demo</option>
+                                                <option value="dipu">example</option>
+                                                <option value="Apu">test</option>
+                                                <option value="ataur">display</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="role" class="text-uppercase mb-2">Role</label>
+                                            <input type="text" class="form-control" id="role" placeholder="ROLE">
+                                        </div>
+
+                                    </section>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Create Modal -->
+    <div class="modal fade" id="actionCreate" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div
+                    class="modal-header d-flex justify-content-between align-items-center border-secondary py-1 rounded-0">
+                    <h1 class="modal-title font-weight-bold text-uppercase">New Action</h1>
+                    <div>
+                        <button type="button" class="close border-0 bg-transparent" data-dismiss="modal"><img
+                                src="./img/icon/Save.png" alt="save"></button>
+                        <button type="button" class="close save border-0 bg-transparent" data-dismiss="modal"><img
+                                src="./img/icon/close.png" alt="close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default ">
+                        <div class="panel-body px-lg-5">
+                            <form autocomplete="off">
+                                <div class="form-group">
+                                    <label for="description" class="text-uppercase mb-2">Action</label>
+                                    <input type="text" class="form-control" id="action" placeholder="ACTION">
+                                </div>
+                                <div class="form-group">
+                                    <label for="description" class="text-uppercase mb-2">Description</label>
+                                    <textarea class="form-control" id="description" rows="2"
+                                        placeholder="DESCRIPTION"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="owner" class="text-uppercase mb-2">Owner</label>
+                                    <select data-placeholder="TYPE OR SELECT" class="chosen-select" name="owner">
+                                        <option value=""></option>
+
+                                        <option value="rizwan">rizwan</option>
+                                        <option value="admin">admin</option>
+                                        <option value="dipu">dipu</option>
+                                        <option value="Apu">Apu</option>
+                                        <option value="ataur">ataur</option>
+                                        <option value="suben">suben</option>
+                                        <option value="sarjan">sarjan</option>
+                                        <option value="radwan">radwan</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="service" class="text-uppercase mb-2">
+                                        Due Date</label>
+                                    <input type="text" class="form-control datepicker" id="" placeholder="DUE DATE">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="category" class="text-uppercase mb-2">Category</label>
+                                    <select data-placeholder="TYPE OR SELECT" class="chosen-select" name="category">
+                                        <option value=""></option>
+                                        <option value="category">category 1</option>
+                                        <option value="category">category 2</option>
+                                        <option value="category">category 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="priority" class="text-uppercase mb-2">priority</label>
+                                    <select data-placeholder="TYPE OR SELECT" class="chosen-select" name="priority">
+                                        <option value=""></option>
+                                        <option value="priority">priority 1</option>
+                                        <option value="priority">priority 2</option>
+                                        <option value="priority">priority 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="priority" class="text-uppercase mb-2">milestone</label>
+                                    <select data-placeholder="TYPE OR SELECT" class="chosen-select" name="milestone">
+                                        <option value=""></option>
+                                        <option value="milestone">milestone 1</option>
+                                        <option value="milestone">milestone 2</option>
+                                        <option value="milestone">milestone 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="priority" class="text-uppercase mb-2">Status</label>
+                                    <select data-placeholder="TYPE OR SELECT" class="chosen-select" name="status">
+                                        <option value=""></option>
+                                        <option value="status">status 1</option>
+                                        <option value="status">status 2</option>
+                                        <option value="status">status 3</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JS here -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugin/jquery-ui.js"></script>
+    <script src="js/plugin/fullcalendar.min.js"></script>
+    <script src="js/plugin/chosen.jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="js/plugin/jquery.steps.js"></script>
+    <script src="js/calender-event.js"></script>
+    <script src="js/form.steps.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        n = new Date();
+        y = n.getFullYear();
+        m = n.toLocaleString('default', { month: 'long' });
+        d = n.getDate();
+        document.getElementById("actionTrackerCurrrentDate").innerHTML = d + " " + m + ", " + y;
+    </script>
+
+    <script>
+        //select
+        $(".chosen-select").chosen({
+            no_results_text: "Oops, nothing found!",
+            width: "100%"
+        });
+
+        //datapicker
+        $(function () {
+            $(".datepicker").datepicker({
+                format: "dd/mm/yyyy",
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+
+
+
+        //category add
+        const categoryAll = document.querySelectorAll('#ck-button');
+        const selectCategoryList = document.querySelector('.select-category-list');
+        const categoryList = document.querySelector('.category-list');
+        categoryAll.forEach(function (category) {
+            console.log(categoryAll)
+            category.addEventListener("click", function () {
+                //console.log(category.innerHTML)
+                var favorite = [];
+                $.each($("input[name='sport']:checked"), function () {
+                    favorite.push($(this).val());
+                });
+                selectCategoryList.innerText = favorite;
+                console.log(selectCategoryList.innerText)
+                var allTheData =
+                    selectCategoryList.textContent.trim().split(',')
+                var separateList = ''
+                allTheData.forEach(function (value) {
+                    separateList += '<span class="badge badge-pill badge-primary mr-2">' + value + '</span>';
+                });
+                separateList += '</>';
+                selectCategoryList.innerHTML = separateList;
+            });
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>

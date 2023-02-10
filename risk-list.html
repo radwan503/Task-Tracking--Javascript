@@ -1,0 +1,791 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="risk-list Tracker | Project Management Tool">
+    <meta name="description" content="risk-list Tracker">
+    <meta name="keywords" content="risk-list Tracker">
+    <meta name="robots" content="index">
+    <meta name="language" content="English">
+    <title>risk-list Tracker| Management Tool</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/plugin/jquery-ui.css">
+    <link rel="stylesheet" href="css/plugin/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/plugin/chosen.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body id="risk-list-page" class="vbox viewport">
+    <header class="navigation-bar">
+        <!-- Navabar -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html"><img class="logo" src="./img/logo.svg"
+                        alt="risk-list-tracker-logo"></a>
+
+                <div class="nav-content" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item nav--item">
+                            <div class="toggle-switch">
+                                <input type="checkbox" class="toggle-switch-view" id="toggleSwitchView">
+                                <label for="toggleSwitchView" class="switch-toggle" data-on="My View"
+                                    data-off="Team View"></label>
+                            </div>
+                        </li>
+
+                        <div class="dropdown notification-dropdown ml-4">
+                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-expanded="false"><img src="./img/icon/notification.svg" class="bizz-iocn"
+                                    alt="information">
+                                    <i class="fas fa-circle position-absolute custom-notification-size"></i>
+                            </a>
+                            <div class="dropdown-menu shadow-lg  position-absolute notification-dropdown"
+                                aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+                                <a class="dropdown-item" href="#">Neil Coomber created a project Smokey Bear</a>
+
+                            </div>
+                        </div>
+
+                        <div class="dropdown notification-dropdown ml-4">
+                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-expanded="false"><img src="./img/icon/burger.svg" class="bizz-iocn"
+                                    alt="information">
+                            </a>
+                            <div class="dropdown-menu shadow-lg  position-absolute notification-dropdown"
+                                aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="./index.html">Dashboard</a>
+                                <a class="dropdown-item" href="./project.html">Project</a>
+                                <a class="dropdown-item" href="./project-list.html">Project List</a>
+                                <a class="dropdown-item" href="./risk-list.html">Risk List</a>
+                                <a class="dropdown-item" href="./meeting.html">Meeting</a>
+                                <a class="dropdown-item" href="./signIn.html">Sign In</a>
+                                <a class="dropdown-item" href="./signup.html">Sign Up</a>
+                            </div>
+                        </div>
+
+                        <div class="dropdown ml-4">
+                            <a class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="./img/icon/user1.png" class="bizz-iocn" alt="user">
+                            </a>
+                            <div class="dropdown-menu shadow-lg  position-absolute profile-dropdown-menu"
+                                aria-labelledby="dropdownMenuButton">
+                                <div class="drop-heading py-3 px-3">
+                                    <div class="text-left">
+                                        <h5 class="text-dark mb-0 fs-10 font-weight-bold fw-semibold">Percy Kewshun</h5>
+                                        <small class="mb-0">Front End Engineer</small>
+                                        <small class="mb-0">example@gmail.com</small>
+                                    </div>
+
+                                </div>
+
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">Sign out</a>
+
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="px-lg-3 main hbox">
+        <div class="container-fluid">
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <div
+                        class="content-title  w-100  d-flex justify-content-between align-content-center align-items-center">
+                        <nav aria-label="breadcrumb" class="page-header bradecrumb-action mt-n2">
+                            <ol
+                                class="breadcrumb d-flex align-content-center align-items-center bg-transparent py-0 px-0">
+                                <li class="text-uppercase mr-2"><img src="./img/icon/team.svg" class="breadcum--icon"
+                                        alt="">
+                                </li>
+                                <li class="breadcrumb-item text-uppercase"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item text-uppercase font-weight-bold active" aria-current="page">
+                                    Risk List</li>
+                            </ol>
+                        </nav>
+
+                        <div class="">
+                                <button type="button" data-toggle="modal" data-target="#riskFilter"
+                                class="btn-at btn-project-filter py-2 ml-3">Set Filter
+                                Project</button>
+                        </div>
+
+                    </div>
+                    <p class="mb-4">You have <span class="font-weight-bold">7</span> risk list</p>
+
+                    <div class="filter-risk-list">
+                        Filter By:
+                        <span class="custom-badge">Open action <button type="button"><img class="close-filter" src="./img/icon/close.svg" alt="close"></button></span>
+                        <span class="custom-badge">owner <button type="button"><img class="close-filter" src="./img/icon/close.svg" alt="close"></button></span>
+
+                    </div>
+                </div>
+            </div>
+
+            <section class="risk-content-block">
+                <div class="row">
+                    <!-- single meeting start-->
+                    <div class="col-md-12 col-lg-12">
+                        <div class="risk-list-single-item card border-left-0 border-right-0 rounded-0 mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-9">
+                                    <div class="card-body risk-list-content--body py-2 px-2">
+                                        <div class="risk-list-status__center-content d-flex flex-column">
+
+                                            <div class="risk-list--details text-wrap">
+                                                <h1 class="font-weight-semibold mb-1">Create network
+                                                    design</h1>
+                                            </div>
+                                            <div class="status-short--info d-lg-flex d-md-flex  justify-content-between">
+                                                <div class="">
+                                                    <p>OWNER : <span class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">WORK STREAM / SERVICE BLOCK: <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">MITIGATION ACTION:<span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                     </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <p class="">INTERNAL / EXTERNAL: <span
+                                                            class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">SEVERITY : <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">STATUS : <span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card-body risk-list-content--body py-2">
+                                        <div
+                                            class="risk-list-status__right-content d-flex justify-content-lg-end align-items-end">
+                                            <div class="">
+                                                <button type="button" class="mr-3" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/edit.png"
+                                                        alt=""></button>
+                                                <button type="button" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/trash-can.png"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12">
+                        <div class="risk-list-single-item card border-left-0 border-right-0 rounded-0 mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-9">
+                                    <div class="card-body risk-list-content--body py-2 px-2">
+                                        <div class="risk-list-status__center-content d-flex flex-column">
+
+                                            <div class="risk-list--details text-wrap">
+                                                <h1 class="font-weight-semibold mb-1">Create network
+                                                    design</h1>
+                                            </div>
+                                            <div class="status-short--info d-lg-flex d-md-flex justify-content-between">
+                                                <div class="">
+                                                    <p>OWNER : <span class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">WORK STREAM / SERVICE BLOCK: <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">MITIGATION ACTION:<span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                     </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <p class="">INTERNAL / EXTERNAL: <span
+                                                            class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">SEVERITY : <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">STATUS : <span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card-body risk-list-content--body py-2">
+                                        <div
+                                            class="risk-list-status__right-content d-flex justify-content-lg-end align-items-end">
+                                            <div class="">
+                                                <button type="button" class="mr-3" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/edit.png"
+                                                        alt=""></button>
+                                                <button type="button" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/trash-can.png"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12">
+                        <div class="risk-list-single-item card border-left-0 border-right-0 rounded-0 mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-9">
+                                    <div class="card-body risk-list-content--body py-2 px-2">
+                                        <div class="risk-list-status__center-content d-flex flex-column">
+
+                                            <div class="risk-list--details text-wrap">
+                                                <h1 class="font-weight-semibold mb-1">Create network
+                                                    design</h1>
+                                            </div>
+                                            <div class="status-short--info d-lg-flex d-md-flex justify-content-between">
+                                                <div class="">
+                                                    <p>OWNER : <span class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">WORK STREAM / SERVICE BLOCK: <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">MITIGATION ACTION:<span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                     </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <p class="">INTERNAL / EXTERNAL: <span
+                                                            class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">SEVERITY : <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">STATUS : <span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card-body risk-list-content--body py-2">
+                                        <div
+                                            class="risk-list-status__right-content d-flex justify-content-lg-end align-items-end">
+                                            <div class="">
+                                                <button type="button" class="mr-3" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/edit.png"
+                                                        alt=""></button>
+                                                <button type="button" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/trash-can.png"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12">
+                        <div class="risk-list-single-item card border-left-0 border-right-0 rounded-0 mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-9">
+                                    <div class="card-body risk-list-content--body py-2 px-2">
+                                        <div class="risk-list-status__center-content d-flex flex-column">
+
+                                            <div class="risk-list--details text-wrap">
+                                                <h1 class="font-weight-semibold mb-1">Create network
+                                                    design</h1>
+                                            </div>
+                                            <div class="status-short--info d-lg-flex d-md-flex justify-content-between">
+                                                <div class="">
+                                                    <p>OWNER : <span class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">WORK STREAM / SERVICE BLOCK: <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">MITIGATION ACTION:<span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                     </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <p class="">INTERNAL / EXTERNAL: <span
+                                                            class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">SEVERITY : <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">STATUS : <span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card-body risk-list-content--body py-2">
+                                        <div
+                                            class="risk-list-status__right-content d-flex justify-content-lg-end align-items-end">
+                                            <div class="">
+                                                <button type="button" class="mr-3" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/edit.png"
+                                                        alt=""></button>
+                                                <button type="button" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/trash-can.png"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12">
+                        <div class="risk-list-single-item card border-left-0 border-right-0 rounded-0 mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-9">
+                                    <div class="card-body risk-list-content--body py-2 px-2">
+                                        <div class="risk-list-status__center-content d-flex flex-column">
+
+                                            <div class="risk-list--details text-wrap">
+                                                <h1 class="font-weight-semibold mb-1">Create network
+                                                    design</h1>
+                                            </div>
+                                            <div class="status-short--info d-lg-flex d-md-flex justify-content-between">
+                                                <div class="">
+                                                    <p>OWNER : <span class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">WORK STREAM / SERVICE BLOCK: <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">MITIGATION ACTION:<span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                     </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <p class="">INTERNAL / EXTERNAL: <span
+                                                            class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">SEVERITY : <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">STATUS : <span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card-body risk-list-content--body py-2">
+                                        <div
+                                            class="risk-list-status__right-content d-flex justify-content-lg-end align-items-end">
+                                            <div class="">
+                                                <button type="button" class="mr-3" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/edit.png"
+                                                        alt=""></button>
+                                                <button type="button" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/trash-can.png"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12">
+                        <div class="risk-list-single-item card border-left-0 border-right-0 rounded-0 mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-9">
+                                    <div class="card-body risk-list-content--body py-2 px-2">
+                                        <div class="risk-list-status__center-content d-flex flex-column">
+
+                                            <div class="risk-list--details text-wrap">
+                                                <h1 class="font-weight-semibold mb-1">Create network
+                                                    design</h1>
+                                            </div>
+                                            <div class="status-short--info d-lg-flex d-md-flex justify-content-between">
+                                                <div class="">
+                                                    <p>OWNER : <span class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">WORK STREAM / SERVICE BLOCK: <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">MITIGATION ACTION:<span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                     </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <p class="">INTERNAL / EXTERNAL: <span
+                                                            class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">SEVERITY : <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">STATUS : <span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card-body risk-list-content--body py-2">
+                                        <div
+                                            class="risk-list-status__right-content d-flex justify-content-lg-end align-items-end">
+                                            <div class="">
+                                                <button type="button" class="mr-3" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/edit.png"
+                                                        alt=""></button>
+                                                <button type="button" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/trash-can.png"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12">
+                        <div class="risk-list-single-item card border-left-0 border-right-0 rounded-0 mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-9">
+                                    <div class="card-body risk-list-content--body py-2 px-2">
+                                        <div class="risk-list-status__center-content d-flex flex-column">
+
+                                            <div class="risk-list--details text-wrap">
+                                                <h1 class="font-weight-semibold mb-1">Create network
+                                                    design</h1>
+                                            </div>
+                                            <div class="status-short--info d-lg-flex d-md-flex justify-content-between">
+                                                <div class="">
+                                                    <p>OWNER : <span class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">WORK STREAM / SERVICE BLOCK: <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">MITIGATION ACTION:<span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                     </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <p class="">INTERNAL / EXTERNAL: <span
+                                                            class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">SEVERITY : <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">STATUS : <span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card-body risk-list-content--body py-2">
+                                        <div
+                                            class="risk-list-status__right-content d-flex justify-content-lg-end align-items-end">
+                                            <div class="">
+                                                <button type="button" class="mr-3" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/edit.png"
+                                                        alt=""></button>
+                                                <button type="button" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/trash-can.png"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12">
+                        <div class="risk-list-single-item card border-left-0 border-right-0 rounded-0 mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-9">
+                                    <div class="card-body risk-list-content--body py-2 px-2">
+                                        <div class="risk-list-status__center-content d-flex flex-column">
+
+                                            <div class="risk-list--details text-wrap">
+                                                <h1 class="font-weight-semibold mb-1">Create network
+                                                    design</h1>
+                                            </div>
+                                            <div class="status-short--info d-lg-flex d-md-flex justify-content-between">
+                                                <div class="">
+                                                    <p>OWNER : <span class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">WORK STREAM / SERVICE BLOCK: <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">MITIGATION ACTION:<span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                     </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <p class="">INTERNAL / EXTERNAL: <span
+                                                            class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">SEVERITY : <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">STATUS : <span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card-body risk-list-content--body py-2">
+                                        <div
+                                            class="risk-list-status__right-content d-flex justify-content-lg-end align-items-end">
+                                            <div class="">
+                                                <button type="button" class="mr-3" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/edit.png"
+                                                        alt=""></button>
+                                                <button type="button" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/trash-can.png"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 col-lg-12">
+                        <div class="risk-list-single-item card border-left-0 border-right-0 rounded-0 mb-3">
+                            <div class="row no-gutters">
+                                <div class="col-md-9">
+                                    <div class="card-body risk-list-content--body py-2 px-2">
+                                        <div class="risk-list-status__center-content d-flex flex-column">
+
+                                            <div class="risk-list--details text-wrap">
+                                                <h1 class="font-weight-semibold mb-1">Create network
+                                                    design</h1>
+                                            </div>
+                                            <div class="status-short--info d-lg-flex d-md-flex justify-content-between">
+                                                <div class="">
+                                                    <p>OWNER : <span class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">WORK STREAM / SERVICE BLOCK: <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">MITIGATION ACTION:<span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                     </p>
+                                                </div>
+
+                                                <div class="">
+                                                    <p class="">INTERNAL / EXTERNAL: <span
+                                                            class="font-weight-medium text-capitalize">Neil
+                                                            Coomber</span></p>
+                                                    <p class="">SEVERITY : <span
+                                                            class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                    <p class="">STATUS : <span
+                                                        class="font-weight-medium text-capitalize">Network</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="card-body risk-list-content--body py-2">
+                                        <div
+                                            class="risk-list-status__right-content d-flex justify-content-lg-end align-items-end">
+                                            <div class="">
+                                                <button type="button" class="mr-3" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/edit.png"
+                                                        alt=""></button>
+                                                <button type="button" data-toggle="modal"
+                                                    data-target="#risk-listCreate"><img src="./img/icon/trash-can.png"
+                                                        alt=""></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+       <!-- Risk Filter -->
+       <div class="modal fade" id="riskFilter" aria-labelledby="riskFilter" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between align-items-center border-secondary py-1">
+                    <h1 class="modal-title font-weight-bold text-uppercase">Set Filter</h1>
+                    <div>
+                        <button type="button" class="close border-0 bg-transparent" data-dismiss="modal"><img
+                                src="./img/icon/Save.png" alt="save"></button>
+                        <button type="button" class="close save border-0 bg-transparent" data-dismiss="modal"><img
+                                src="./img/icon/close.png" alt="close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body px-lg-5">
+                            <form autocomplete="off">
+                                <div class="form-group">
+                                    <label for="action-status" class="text-uppercase mb-2">Action status</label>
+                                    <select data-placeholder="TYPE OR SELECT" class="chosen-select" name="actionStatus">
+                                        <option value=""></option>
+                                        <option value="action-status">action-status 1</option>
+                                        <option value="action-status">action-status 2</option>
+                                        <option value="action-status">action-status 3</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="owner" class="text-uppercase mb-2">Owner</label>
+                                    <select data-placeholder="TYPE OR SELECT" class="chosen-select" name="owner">
+                                        <option value=""></option>
+
+                                        <option value="rizwan">rizwan</option>
+                                        <option value="admin">admin</option>
+                                        <option value="dipu">dipu</option>
+                                        <option value="Apu">Apu</option>
+                                        <option value="ataur">ataur</option>
+                                        <option value="suben">suben</option>
+                                        <option value="sarjan">sarjan</option>
+                                        <option value="radwan">radwan</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="service" class="text-uppercase mb-2">
+                                        Due Date</label>
+                                    <input type="text" class="form-control datepicker" id="" placeholder="DUE DATE"
+                                        autocomplete="false">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="category" class="text-uppercase mb-2">Category</label>
+                                    <select data-placeholder="TYPE OR SELECT" class="chosen-select" name="category">
+                                        <option value=""></option>
+                                        <option value="category">category 1</option>
+                                        <option value="category">category 2</option>
+                                        <option value="category">category 3</option>
+                                    </select>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS here -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugin/jquery-ui.js"></script>
+    <script src="js/plugin/fullcalendar.min.js"></script>
+    <script src="js/plugin/chosen.jquery.min.js"></script>
+    <script src="js/calender-event.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        //select
+        $(".chosen-select").chosen({
+            no_results_text: "Oops, nothing found!",
+            width: "100%"
+        });
+
+        //datapicker
+        $(function () {
+            $(".datepicker").datepicker({
+                format: "dd/mm/yyyy",
+                autoclose: true,
+                todayHighlight: true
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

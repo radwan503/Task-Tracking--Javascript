@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="248.862" height="56.434" viewBox="0 0 248.862 56.434">
+  <defs>
+    <filter id="ACTIONTRACKER" x="24.862" y="4.804" width="224" height="46" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_35" x="0" y="0" width="38.058" height="56.434" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_727" data-name="Group 727" transform="translate(-71.15 -106)">
+    <g transform="matrix(1, 0, 0, 1, 71.15, 106)" filter="url(#ACTIONTRACKER)">
+      <text id="ACTIONTRACKER-2" data-name="ACTIONTRACKER" transform="translate(33.86 32.8)" fill="#fff" font-size="23" font-family="Montserrat-Regular, Montserrat"><tspan x="0" y="0">ACTION</tspan><tspan y="0" font-family="Montserrat-Bold, Montserrat" font-weight="700">TRACKER</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 71.15, 106)" filter="url(#Path_35)">
+      <path id="Path_35-2" data-name="Path 35" d="M50.838,34.434V19.4H42.479L54.49-4V11.037h8.047Z" transform="translate(-33.48 10)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,339 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .card {
+    box-shadow: 0 0.125rem 0.75rem rgba(0, 0, 0, .075) !important;
+    border: 0;
+  }
+
+  img.logo {
+    height: 21px;
+  }
+
+  #project-page .tab-content .action-tracker-action--segment .action-filter {
+    display: block;
+  }
+
+  #project-page .tab-content .action-tracker-action--segment .action-filter .filter-action-list {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .project-details-aside .at-canvas {
+    width: 100%;
+  }
+  img.pull-at-canvas-open-img {
+    margin-left: 8px;
+  }
+  .dropdown-menu {
+    left: initial;
+    top: 38px;
+    right: 0 !important;
+    padding: 0;
+    min-width: 12rem;
+    border: 0;
+    width: 100%;
+    word-break: break-all;
+  }
+  a.dropdown-item {
+    font-size: 12px;
+    border-top: 1px solid #e9edf4;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* display: -webkit-box; */
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (max-width:992px) {
+  .card {
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    border: 0;
+  }
+
+  .navigation-bar .navbar {
+    height: 95px;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navigation-bar .navbar .nav--item .bizz-iocn {
+    height: 2.2rem;
+    width: 2.2rem;
+    background: #ddd;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+  /* dashboard */
+  .action_tracker-action-block,
+  .action_tracker-activity-block {
+    margin-top: 28px !important;
+  }
+
+  #dashboard-page .action_tracker-calendar-block .calendar-card .action_tracker__event-calender .fc-daygrid-day-number {
+    padding: 0.125rem 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.675rem;
+  }
+
+  /* project page */
+  #project-page .tab-content .action-tracker-action--segment .action-tracket-actions-segment-content .action-list .card {
+    border: 0;
+  }
+
+  #project-page .tab-content .action-tracker-action--segment .action-tracket-actions-segment-content .action-list .card .border-right {
+    border-right: 0 !important;
+  }
+
+  .msg_container_base .msg_container {
+    max-width: 100%;
+  }
+
+  #project-page .nav-pills .nav-link.active {
+    color: #050000;
+    border-bottom: 0;
+    background-color: transparent;
+    border-radius: inherit;
+  }
+
+  .action-tracker-risk-segment {
+    width: 100% !important;
+  }
+
+  .action-tracker-team-segment {
+    width: 100% !important;
+  }
+
+  /* canvas */
+
+  .project-details-aside .at-canvas-right {
+    right: 0;
+    margin-right: -100%;
+  }
+
+  .button-group {
+    position: fixed;
+    right: 0px;
+    bottom: 140px;
+    margin-top: 10px;
+    z-index: 9999999999999;
+  }
+
+  .button-group button {
+    background-color: #e9e9ec;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1rem !important;
+    color: #fff !important;
+    border: 0;
+  }
+
+  .projects-list {
+    margin-top: 1rem;
+  }
+
+  .project-item-list {
+    margin-right: 5px;
+  }
+
+}
+
+@media (min-width: 993px) and (max-width:1024px){
+  .project-details-aside .at-canvas-right {
+    right: 0;
+    margin-right: -100%;
+  }
+
+  .button-group {
+    position: fixed;
+    right: 0px;
+    bottom: 140px;
+    margin-top: 10px;
+    z-index: 9999999999999;
+  }
+
+  .button-group button {
+    background-color: #e9e9ec;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1rem !important;
+    color: #fff !important;
+    border: 0;
+  }
+
+  .projects-list {
+    margin-top: 1rem;
+  }
+
+  .project-item-list {
+    margin-right: 5px;
+  }
+  .project-details-aside .at-canvas{
+    height: calc(100% - 7%);
+  }
+}
+
+@media only screen and (min-width: 993px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    padding: 0 0rem;
+  }
+
+  nav.navbar {
+    padding: 0 0rem;
+  }
+
+  #dashboard-page .action_tracker-calendar-block .calendar-card {
+    height: 17.2rem;
+  }
+
+  #dashboard-page .fc .fc-daygrid-day-events {
+    margin-top: -7px;
+  }
+
+  #dashboard-page .fc-scrollgrid-sync-table {
+    height: 180px !important;
+  }
+
+  #dashboard-page .action_tracker-calendar-block .calendar-card .action_tracker__event-calender .fc-daygrid-day-number {
+    padding: 0.125rem 0.50rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+  }
+
+  #dashboard-page .action_tracker-project-block .action_tracker--project-card .action_tracker__list-group .outer-list-group {
+    height: 12.5rem;
+    overflow: auto;
+  }
+
+  #dashboard-page .action_tracker-action-block .action-tracker-actions .action-tracker-action-list {
+    height: 31.188rem;
+    overflow: auto;
+  }
+
+  #dashboard-page .action_tracker-activity-block .action-tacker--activity-card .action-tracker-activity .action-tracker-activity-list {
+    height: 34.063rem;
+    overflow: auto;
+  }
+
+  .project-details-aside .at-canvas {
+    width: 99%;
+  }
+
+  .project-details-aside .at-canvas-right {
+    right: 0;
+    margin-right: -90%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .project-details-aside .at-canvas-right {
+    right: 0;
+    margin-right: -90%;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+
+  /* project canvas */
+  .project-details-aside .at-canvas .projects-list .project-tab-content {
+    height: calc(100vh - 194px - 50px);
+  }
+
+  .project-details-aside .at-canvas .projects-left-side .project-details-content .project-based-activity .project-based-activity-list {
+    height: calc(100vh - 424px - 50px);
+  }
+
+  .project-details-aside .at-canvas-right {
+    right: 0;
+    margin-right: -75%;
+  }
+
+  .project-details-aside .at-canvas {
+    height: calc(100% - 10%);
+  }
+
+  .project-details--info .btn-project-edit {
+    margin-bottom: 2.5rem !important;
+  }
+
+}
+
+@media screen and (max-width:1600px) {
+
+  #dashboard-page .action_tracker-calendar-block .calendar-card .action_tracker__event-calender .fc-daygrid-day-frame {
+    width: 85%;
+  }
+
+  .fc-daygrid-body {
+    margin-left: 3px !important;
+  }
+
+}
+
+@media only screen and (min-width: 1920px) {
+  body {
+    padding: 0 23rem;
+  }
+
+  nav.navbar {
+    padding: 0 24rem;
+  }
+
+  #dashboard-page .action_tracker-calendar-block .calendar-card {
+    height: 21.5rem;
+  }
+
+  #dashboard-page .fc .fc-daygrid-day-events {
+    margin-top: -7px;
+  }
+
+  #dashboard-page .fc-scrollgrid-sync-table {
+    height: 250px !important;
+  }
+
+  #dashboard-page .action_tracker-calendar-block .calendar-card .action_tracker__event-calender .fc-daygrid-day-frame {
+    min-height: 85%;
+  }
+
+  #dashboard-page .action_tracker-project-block .action_tracker--project-card .action_tracker__list-group .outer-list-group {
+    height: 18rem;
+    overflow: auto;
+  }
+
+  #dashboard-page .action_tracker-action-block .action-tracker-actions .action-tracker-action-list {
+    height: 41.25rem;
+    overflow: auto;
+  }
+
+  #dashboard-page .action_tracker-activity-block .action-tacker--activity-card .action-tracker-activity .action-tracker-activity-list {
+    height: 44.188rem;
+    overflow: auto;
+  }
+
+  /* project page*/
+  #project-page .tab-content .action-tracker-action--segment .action-tracket-actions-segment-content {
+    height: 39.813rem;
+    overflow: auto;
+  }
+
+  /* chat */
+  .action-tracker-action--segment .msg_container_base {
+    height: calc(100vh - 480px);
+  }
+}
